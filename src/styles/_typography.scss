@@ -1,0 +1,28 @@
+@import './variable';
+@import url('');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  :hover {
+    color: #1c1c1c;
+  }
+}
