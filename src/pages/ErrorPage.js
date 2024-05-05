@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
   return (
     <div
       className="d-flex justify-content-center"
       style={{
-        padding: "100px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
+        padding: '100px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
       }}
     >
       <h1>404</h1>

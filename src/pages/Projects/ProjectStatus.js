@@ -1,6 +1,6 @@
-import ProjectStatusLogo from "./ProjectStatusLogo";
-import Dot from "../../components/Dot/Dot";
-import "./ProjectStatus.scss";
+import ProjectStatusLogo from './ProjectStatusLogo';
+import Dot from '../../components/Dot/Dot';
+import './ProjectStatus.scss';
 
 const ProjectStatus = () => {
   return (
