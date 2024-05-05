@@ -1,14 +1,17 @@
-// import "./App.css";
+import { ConfigProvider } from "antd";
+import theme from "./theme/theme";
 import AppRoutes from "./AppRoutes";
 import "./App.scss";
 import "./styles/main.scss";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <AppRoutes />
+      <ConfigProvider theme={theme}>
+        <AppRoutes />
+      </ConfigProvider>
     </div>
   );
-}
+};
 
 export default App;
