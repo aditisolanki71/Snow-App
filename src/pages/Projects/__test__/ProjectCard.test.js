@@ -1,13 +1,13 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import ProjectCard from '../ProjectCard';
-const mockText = 'Sample Project';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import ProjectCard from "../ProjectCard";
+const mockText = "Sample Project";
 const mockNumber = 42;
-const mockColor = '#123456';
+const mockColor = "#123456";
 const mockIsProductivity = true;
 
-describe('ProjectCard Component', () => {
-  it('renders ProjectCard component correctly', () => {
+describe("ProjectCard Component", () => {
+  it("renders ProjectCard component correctly", () => {
     // Mock data
 
     render(
@@ -30,8 +30,8 @@ describe('ProjectCard Component', () => {
 
     // Check if the subtext with ArrowIcon is rendered for productivity
     if (mockIsProductivity) {
-      const subtext = screen.getByText('+1.48%');
-      const arrowIcon = screen.getByTestId('arrow-icon');
+      const subtext = screen.getByText("+1.48%");
+      const arrowIcon = screen.getByTestId("arrow-icon");
       // eslint-disable-next-line jest/no-conditional-expect
       expect(subtext).toBeInTheDocument();
       // eslint-disable-next-line jest/no-conditional-expect
@@ -39,9 +39,9 @@ describe('ProjectCard Component', () => {
     } else {
       // Ensure that the subtext and ArrowIcon are not present if not productivity
       // eslint-disable-next-line jest/no-conditional-expect
-      expect(screen.queryByText('+1.48%')).toBeNull();
+      expect(screen.queryByText("+1.48%")).toBeNull();
       // eslint-disable-next-line jest/no-conditional-expect
-      expect(screen.queryByTestId('arrow-icon')).toBeNull();
+      expect(screen.queryByTestId("arrow-icon")).toBeNull();
     }
   });
 });

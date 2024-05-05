@@ -1,15 +1,15 @@
-import { Row, Col } from "antd";
-import Header from "../Header/Header";
-import { BaseSnowAppContainerStyles } from "./BaseSnowAppContainer.styles";
-import NotificationBar from "../RightSidebar/Notificationbar";
-import Sidebar from "../Sidebar/Sidebar";
-import React, { useState } from "react";
+import { Row, Col } from 'antd';
+import Header from '../Header/Header';
+import { BaseSnowAppContainerStyles } from './BaseSnowAppContainer.styles';
+import NotificationBar from '../RightSidebar/Notificationbar';
+import Sidebar from '../Sidebar/Sidebar';
+import React, { useState } from 'react';
 
 const BaseSnowAppContainer = ({ children }) => {
   const [showSidebar, setShowSidebar] = useState(true);
 
   const toggleSidebar = () => {
-    console.log("toggle sidebar clicked here");
+    console.log('toggle sidebar clicked here');
     setShowSidebar(!showSidebar);
   };
 
