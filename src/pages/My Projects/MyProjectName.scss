@@ -1,0 +1,13 @@
+.card_container {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.name_card {
+  border-radius: 16px;
+  background: #f7f9fb;
+  padding: 32px;
+
+  margin-bottom: 28px;
+}

@@ -1,0 +1,55 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import ProjectNameCard from '../ProjectNameCard';
+
+describe('ProjectNameCard Component', () => {
+  const mockProject = {
+    projectName: 'Test Project',
+    projectDueDate: '2023-12-31',
+    status: 'In Progress',
+    statusPercent: 50,
+    totalTask: 10,
+    avatarImg: 'path/to/avatar.png',
+    cardImg: 'path/to/card.png',
+    statusColor: '#00FF00',
+  };
+
+  it('renders ProjectNameCard component correctly', () => {
+    render(
+      <ProjectNameCard
+        projectName={mockProject.projectName}
+        projectDueDate={mockProject.projectDueDate}
+        status={mockProject.status}
+        statusPercent={mockProject.statusPercent}
+        totalTask={mockProject.totalTask}
+        avatarImg={mockProject.avatarImg}
+        cardImg={mockProject.cardImg}
+        statusColor={mockProject.statusColor}
+      />
+    );
+
+    // Check if the project name, due date, and images are rendered
+    const projectName = screen.getByText(mockProject.projectName);
+    const dueDate = screen.getByText(mockProject.projectDueDate);
+    const cardImage = screen.getByAltText('card img');
+    const avatarImage = screen.getByAltText('avatar img');
+
+    expect(projectName).toBeInTheDocument();
+    expect(dueDate).toBeInTheDocument();
+    expect(cardImage).toBeInTheDocument();
+    expect(avatarImage).toBeInTheDocument();
+
+    // Check if the status, progress bar, total tasks, and status percentage are rendered
+    const status = screen.getByText(mockProject.status);
+    const progressBar = screen.getByRole('progressbar');
+    const totalTasks = screen.getByText(`${mockProject.totalTask} Total Tasks`);
+    const statusPercentage = screen.getByText(`${mockProject.statusPercent}%`);
+
+    expect(status).toBeInTheDocument();
+    expect(progressBar).toBeInTheDocument();
+    expect(totalTasks).toBeInTheDocument();
+    expect(statusPercentage).toBeInTheDocument();
+  });
+
+  // Add more test cases as needed for specific behavior of the component
+});
