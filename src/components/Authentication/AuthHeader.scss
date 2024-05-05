@@ -1,0 +1,36 @@
+/* Assuming you have a CSS file or a CSS-in-JS solution */
+.custom_menu .ant-menu-horizontal {
+  border-bottom: none; /* Remove the bottom border */
+}
+
+/* iPhone 12 and larger screens */
+.auth_header_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 776px) {
+  .custom_menu {
+    display: none !important;
+    background-color: green;
+  }
+}
+
+@media (min-width: 777px) {
+  .custom_menu {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.auth_action_button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: "right";
+}

@@ -8,6 +8,10 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<LoginPage />} />
+
+        <Route exact path="/signup" element={<SignupPage />} />
+        <Route exact path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/*" element={<Layout />} />
       </Routes>
     </Router>

@@ -1,0 +1,33 @@
+.line-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 28px 0px;
+}
+.ant-card .ant-card-body {
+  padding: 0px;
+}
+h1,
+h4 {
+  margin: 0px;
+}
+/* Style for the horizontal line */
+.line {
+  flex-grow: 1; /* Allow the line to grow and fill available space */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Customize the line appearance */
+}
+
+/* Style for the words in the middle */
+.words {
+  font-size: 12px; /* Customize font size */
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.signup-words {
+  font-size: 12px; /* Customize font size */
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
