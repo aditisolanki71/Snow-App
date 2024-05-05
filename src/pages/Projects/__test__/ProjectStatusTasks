@@ -1,0 +1,18 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import ProjectStatusTasks from '../ProjectStatusTasks';
+
+describe('ProjectStatusTasks Component', () => {
+  it('renders ProjectStatusTasks component correctly', () => {
+    render(<ProjectStatusTasks />);
+    // Check if the project-status-tasks container is rendered
+    const projectStatusTasksContainer = screen.getByTestId(
+      'project-status-tasks'
+    );
+    expect(projectStatusTasksContainer).toBeInTheDocument();
+    // Check if ProjectStatus and ProjectTasks components are rendered
+    // expect(screen.getByTestId('project-status')).toBeInTheDocument();
+    // expect(screen.getByTestId('project-tasks')).toBeInTheDocument();
+    // Optionally, you can add more specific checks for the content or behavior of ProjectStatus and ProjectTasks
+  });
+});

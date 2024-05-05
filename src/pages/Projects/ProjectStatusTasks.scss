@@ -1,0 +1,35 @@
+.project_status_tasks_container {
+  margin: 28px 0px;
+  display: flex;
+  gap: 42px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.project_status {
+  background-color: aqua;
+  border-radius: 16px;
+  background: #f7f9fb;
+  padding: 24px;
+}
+
+.project_tasks {
+  background-color: aquamarine;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 16px;
+  background: #f7f9fb;
+}
+
+.ant-table-tbody > tr.ant-table-row > td {
+  border: none;
+  height: 5px;
+}
+
+@media (max-width: 767px) {
+  .projectStatusTasksContainer {
+    flex-wrap: wrap;
+  }
+}
